@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html> <head> 
+    <title>Wild Life Hunt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <style>
+        p {
+            background-color:lightcoral;
+           font-family: Times;
+            border: 5px solid lavender;
+            padding: 10px;
+            }
+         #tries{
+            background-color:white;
+            font-family: Times;
+            border: 5px solid lavender;
+            padding: 10px;
+        }
+        #distance{
+            background-color:lightgreen;
+            font-family: Times;
+            border: 5px solid lavender;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animal hunt Pragna Reddy Nathala</h1>
+    <p>Click on the squares to search for wild life</p>
+    <p id="tries">Number of tries is zero</p>
+    <p id="distance">Distance is unknown</p>
+
+<div class="container-row justify-content-center">
+    <div class="row ">
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.0" onclick="check(0)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.1" onclick="check(1)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.2" onclick="check(2)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.3" onclick="check(3)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.4" onclick="check(4)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.5" onclick="check(5)"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.6" onclick="check(6)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.7" onclick="check(7)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.8" onclick="check(8)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.9" onclick="check(9)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.10" onclick="check(10)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.11" onclick="check(11)"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.12" onclick="check(12)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.13" onclick="check(13)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.14" onclick="check(14)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.15" onclick="check(15)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.16" onclick="check(16)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.17" onclick="check(17)"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.18" onclick="check(18)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.19" onclick="check(19)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200"class="rounded img-fluid" id="IMG.20" onclick="check(20)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.21" onclick="check(21)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.22" onclick="check(22)"></div>
+        <div class="col-sm-2"><img src="hole.jpg" alt="hole" width="200" height="200" class="rounded img-fluid"id="IMG.23" onclick="check(23)"></div>
+    </div>
+</div>
+    
+</div>
+
+<script>
+    var ids = [];
+    var triesCount = 0;
+    var animalLocation = 13;
+    var AnimalDistance = "unknown"
+    for (var i = 0; i < 24; i++) {
+        ids.push("IMG." + i)
+    }
+ 
+    function check(index) {
+        let id = ids[index];
+        if (index == animalLocation) {
+            document.getElementById(id).src = "plant.jpg";
+        } else {
+            document.getElementById(id).src = "rabbit.jpg";
+        }
+        triesCount++;
+        document.getElementById("tries").innerHTML = "Number of tries are " + triesCount;
+        AnimalDistance = distance(index, animalLocation);
+
+        document.getElementById("distance").innerHTML = "Distance is " + AnimalDistance;
+    }
+    function distance(pos1, pos2) {
+        var columm = 6;
+        var totalValue = pos1 <= animalLocation ? columm : -columm;
+        var VerticalDistance = 0;
+        var horizantalDistance = 0;
+        var minimumRange = Math.abs(animalLocation / columm) * columm;
+        var maximumRange = minimumRange + (columm)
+        while (true) {
+
+            Math.abs(animalLocation - pos1)
+            if (minimumRange <= pos1 && pos1 < maximumRange) {
+                horizantalDistance = Math.abs(animalLocation - pos1);
+                break;
+            }
+            else {
+                pos1 = pos1 + totalValue;
+                VerticalDistance = VerticalDistance + 1;
+            }
+        }
+
+        return Math.max(VerticalDistance, horizantalDistance);
+    }
+
+
+</script>
+</body>
+</html>	
