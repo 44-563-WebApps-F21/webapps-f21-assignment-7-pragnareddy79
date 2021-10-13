@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> Timer</title>
+  <title>Timer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,23 +10,57 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-  <h2>Pragna Reddy Nathala reaction timer</h2>
-  <p id="target">Your time</p>
-  <p id="countdown">Count</p>
-  <div>
-    <input type="button" class="btn btn-warning" onclick="startTime()" value="Start Timer" />
-    <input type="button" class="btn btn-danger" onclick="recordReact()" value="React Now" />
-    </div>
-  
-  <script> 
-  var myTime = undefined;
-function recordReact() {
-  myTime = Date.now();
-  console.log(myTime);
+    <h1>Pragna Reddy Nathala reaction timer</h1>
+    <br>
+    <p id="target">Your time</p>
+    <p id="countdown">Count</p>
+    <button class="btn btn-primary" onclick="startTime()"> Start Timer </button>
+    <button id="react" class="btn btn-primary" onclick="recordReact()"> React Now </button>
+    <script>
+      myTime = undefined;
+      var min=2
+    var max=10
+     function recordReact() {                        
+      myTime = Date.now();
+      console.log("Time : " + YourTime);
+    }
+    function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
-  
-  </script>
+    function startTime() {
+       var countstart = getRandomIntInclusive(2, 10);
+       console.log(countstart);
+      for (var i = 0; i < countstart; i++) {
 
+             setTimeout(function (i) {
+                  document.getElementById("countdown").innerHTML = i
+                       }, ((countstart-3-i) * 1000), i)
+
+     
+                  setTimeout(function (i) {
+                     
+              if (myTime == undefined) {
+                document.getElementById("target").innerHTML = "Too Slow"
+                document.getElementById("react").classList.add("btn-danger");
+                document.getElementById("react").classList.remove("btn-success");
+                
+              }
+              else {
+                var buttonTime = Date.now();
+                var elapsedTime = buttonTime - myTime;
+                document.getElementById("target").innerHTML = "Time was " + elapsedTime;
+                document.getElementById("react").classList.add("btn-success");
+                document.getElementById("react").classList.remove("btn-danger");
+             
+              }
+            }, (countstart-1)*1000);
+          }
+            
+          }
+      
+        
+  </script>
 </body>
 </html>
