@@ -84,6 +84,11 @@
         ids.push("IMG." + i)
     }
  
+    tirecount = 0
+            min =0
+            max = 23
+            animalLocation = Math.floor(Math.random() * (max - min + 1) + min)
+
     function check(index) {
         let id = ids[index];
         if (index == animalLocation) {
