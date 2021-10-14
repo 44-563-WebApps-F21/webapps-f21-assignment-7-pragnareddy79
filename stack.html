@@ -3,7 +3,7 @@
 
 <head>
 	<title>
-		Stack 
+		Stack
 	</title>
 
 
@@ -11,7 +11,7 @@
 		.flex-container {
 			display: flex;
 			flex-direction: row;
-			background-color: red;
+			background-color: lightblue;
 		}
 
 		.flex-container>div {
@@ -59,7 +59,7 @@
 		.popbtn ,.zapbtn{
 			background-color:black;
 			border: black;
-			color: wheat;
+			color: white;
 			padding: 5px;
 			font-size: larger;
 			margin-left: 10px;
@@ -95,8 +95,10 @@
 	</p>
 	<div class="input-div">
 		<input id="input" type="text" />
-		<button class="pushbtn" style="background-color: crimson;" onclick="makeNewDiv()">Push value</button>
-	
+		<button class="pushbtn" style="background-color: black;" onclick="makeNewDiv()">Push value</button>
+		<button class="popbtn" style="background-color: black;" onclick="popItem()">Pop</button>
+		<button class="zapbtn" style="background-color: black;" onclick="Zapvalues()">Zap values</button>
+        
 
 
 	</div>
@@ -140,9 +142,32 @@ for (let index = 0; index < stackItems.length; index++) {
 		document.getElementById('target').appendChild(element)
 
 	}
+	function popItem() {
+		let stackItems = document.getElementsByClassName('stack');
+		if (stackItems != undefined && stackItems.length > 0) {
+			stackItems[stackItems.length - 1].remove();
+		}
+
+	}
+	function Zapvalues() {
+		let data = document.getElementById("input").value;
+		let stackItems = document.getElementsByClassName('stack');
+
+		if (stackItems != undefined && stackItems.length > 0) {
+			let stacksLength = stackItems.length;
+			for (let index = 0; index < stackItems.length; index++) {
+				let element = stackItems[index].innerHTML;
+				if (element == data) {
+					console.log(stackItems[index])
+					stackItems[index].remove();
+					index--;
+				}
+
+			}
+		}
 
 
-	
+	}
 </script>
 
 </html>
